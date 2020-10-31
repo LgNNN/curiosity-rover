@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="img/mars.png">
+        <title>Mars Curiosity Rover | Home</title>
+        <meta charset="UTF-8">
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="A website to view Mars photos taken by Curiosity Rover filtered by camera and date.">
+        <meta name="keywords" content="rover,curiosity,mars,red planet,mars photos">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="node_modules/lightbox2/dist/css/lightbox.css" type="text/css">
+        <link rel="stylesheet" href="css/tailwind.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body class="body">
+        <%- include('./partials/_header'); %>
+        <main class="flex flex-col flex-grow items-center mt-4 flex-no-wrap main2 mx-auto">
+            <h2 class="text-black mb-2 text-center text-4xl font-bold leading-none">Explore the <span class="text-red-700 font-bold">Red planet</span>!</h2>  
+            <form class=" mb-3 text-black flex flex-col md:flex-row items-center mt-4">
+                    <label class="mr-2 font-bold text-lg mt-5 md:mt-0" for="cam">Choose a camera:</label>
+                    <select id="cam" name="cameras" class="bg-orange-500 text-lg font-bold p-1 rounded outline-none">
+                        <option class="font-bold text-lg" value="all">all</option>
+                        <option class="font-bold text-lg" value="NAVCAM">NAVCAM</option>
+                        <option class="font-bold text-lg" value="FHAZ">FHAZ</option>
+                        <option class="font-bold text-lg" value="RHAZ">RHAZ</option>
+                        <option class="font-bold text-lg" value="MAST">MAST</option>
+                        <option class="font-bold text-lg" value="CHEMCAM">CHEMCAM</option>
+                        <option class="font-bold text-lg" value="MAHLI">MAHLI</option>
+                        <option class="font-bold text-lg" value="MARDI">MARDI</option>
+                    </select>
+                    <label class="mx-2 font-bold text-lg " for="date">Date:</label>
+                    <input id="date" class="date active:outline-none" type="date"  name="date" value="2020-10-27" min="2012-08-06">
+                    <input id="getpics" class="searchbtn active:bg-orange-700 hover:bg-orange-600 mt-3 md:mt-0"  type="submit" value="Search">
+            </form>
+            <iframe draggable="false" width="540px" height="540px"  src="img/rotation_mars.gif" class="mt-8 hidden md:block"></iframe>
+            <div id="galery" class="gallery">
+            </div>
+            <div id="message" class="text-orange-600 font-bold text-lg md:text-2xl mt-2 max-w-sm text-center">
+            </div>
+            <button id="load" class="mb-2 loadbtn active:bg-orange-700 hover:bg-orange-600 focus:outline-none hide block">Load More</button>
+        </main>
+        <button id="topBtn" class="bg-orange-600 hover:bg-orange-700 p-3 rounded-lg text-black font-bold text-lg" title="Go to top">Top</button>
+        <%- include('./partials/_footer'); %>
+        <script type ="text/javascript" src="/node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+        <script type="text/javascript" src="/js/topBtn.js"></script>
+        <script type="text/javascript" src="/js/UI.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+img{
+    height: 15rem;
+    width: 30rem; 
+}
+
+.hide{
+    display: none;
+}
+
+#topBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 15px; 
+    right: 25px; 
+    z-index: 99; 
+    outline: none; 
+    cursor: pointer; 
+
+  }
+
+  .main2{
+    max-width: 80%;
+  }
+
+  .roverImg{
+    height: 28rem;
+    width: 25rem; 
+      
+  }

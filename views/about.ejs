@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="img/mars.png">
+        <title>Mars Curiosity Rover | About</title>
+        <meta charset="UTF-8">
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="A website to view Mars photos taken by Curiosity Rover filtered by camera and date.">
+        <meta name="keywords" content="rover,curiosity,mars,red planet,mars photos">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/tailwind.css" type="text/css">
+    </head>
+<body class="body">
+    <%- include('./partials/_header'); %>
+    <main class="flex-grow mx-auto w-full main2">
+        <article class="w-full flex flex-col items-center max-w-lg mx-auto mb-5 ">
+            <h2 class="text-4xl font-bold leading-none mt-5 text-center">Mission Overview</h2>
+                <img class="roverImg mt-4" src="img/rover.jpg" alt="Rover_Image">
+                <p class="text-xl leading-tight  mt-4">
+                    Part of NASA's Mars Science Laboratory mission, Curiosity
+                     is the largest and most capable rover ever sent to Mars. It launched 
+                     November 26, 2011 and landed on Mars at 10:32 p.m. PDT on Aug. 5, 2012 
+                     (1:32 a.m. EDT on Aug. 6, 2012).
+                    Curiosity set out to answer the question: <span class="italic">Did Mars ever have the right 
+                    environmental conditions to support small life forms called microbes?</span> 
+                    Early in its mission, Curiosity's scientific tools found chemical and 
+                    mineral evidence of past habitable environments on Mars. It continues to 
+                    explore the rock record from a time when Mars could have been home to 
+                    microbial life.
+                </p>
+        </article>
+    </main>
+    <%- include('./partials/_footer'); %>
+</body>
+</html>
