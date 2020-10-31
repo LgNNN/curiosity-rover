@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tail": "tailwindcss build server/public/css/compile.css -o server/public/css/tailwind.css"
+    "tail": "tailwindcss build server/public/css/compile.css -o server/public/css/tailwind.css",
+    "start": "node src/server.js",
+    "heroku-postbuild":"cd public && npm install"
   },
   "keywords": [],
   "author": "",
