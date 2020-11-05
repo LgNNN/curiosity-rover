@@ -16,7 +16,7 @@ class UI {
         "An error occured while trying to fetch data from the server!";
       this.message.appendChild(el);
       this.load.classList.add("hide");
-    } else if (data.error && flag) {
+    } else if (data.error) {
       const el = document.createElement("p");
       el.textContent = "There was an error from NASA's API.";
       this.message.appendChild(el);
