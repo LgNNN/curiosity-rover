@@ -17,7 +17,7 @@ The express server sends http requests to NASA's API using axios and gets back t
 - ejs
 - tailwindcss
 ## Setup
-To run this project you need a valid api key from NASA. You can get one for free at [https://api.nasa.gov]([https://api.nasa.gov).  
+To run this project you need a valid api key from NASA. You can get one for free at [https://api.nasa.gov]([https://api.nasa.gov)  
 Create a **.env** file and add your key.
 ```
 API_KEY ='your-api-key' 
